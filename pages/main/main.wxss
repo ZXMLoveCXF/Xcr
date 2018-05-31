@@ -1,0 +1,62 @@
+/* pages/main/main.wxss */
+
+.addAct {
+  background-color: #f79400;
+  border-radius: 100%;
+  height: 100rpx;
+  width: 100rpx;
+  position: fixed;
+  right: 30rpx;
+  bottom: 30rpx;
+  color: #fff
+}
+
+.act-list {
+  width: 690rpx;
+  padding: 30rpx;
+}
+
+.act-list .act-one {
+  width: 690rpx;
+}
+
+.act-list .act-one .act-img-box {
+  width: 690rpx;
+  position: relative;
+}
+
+.act-list .act-one image {
+  width: 690rpx;
+  height: 322rpx;
+  border-radius: 25rpx 20rpx 20rpx 20rpx;
+  display: block;
+}
+
+.act-list .act-one .act-content-box {
+  display: flex;
+  font-size: 27rpx;
+  margin-top: 10rpx;
+  line-height: 60rpx;
+}
+
+.act-list .act-one .act-content-box.title {
+  font-size: 35rpx;
+  color: #000;
+}
+
+.act-list .act-one .act-content-box.detail {
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #888;
+}
+
+.act-list .act-one .act-content-box.time {
+  font-size: 28rpx;
+  line-height: 30rpx;
+  color: #888;
+}
+
+.orang {
+  color: #f79400;
+  margin-right: 10rpx;
+}

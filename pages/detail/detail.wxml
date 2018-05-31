@@ -1,0 +1,129 @@
+<!-- pages/detail/detail.wxml -->
+<image class="banner" src="{{ result.mainImagePath }}"></image>
+<view class="act-title">
+  <view class="title">{{ result.activityName }}</view>
+  <view>活动地点: {{ result.locationName }}</view>
+  <view>活动时间: {{ result.activityTime }}</view>
+</view>
+<view class="act-title">
+  <view class="title">活动简介</view>
+  <view style="width: 690rpx;">{{ result.activityDesc }}</view>
+</view>
+<view class="act-title">
+  <view class="a-title">
+    <view class="title">活动相册</view>
+    <view class="">
+      <image src="../../resources/images/arrow.png"></image>
+    </view>
+  </view>
+  <view class="album">
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
+    <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
+  </view>
+</view>
+<view class="act-title">
+  <view class="a-title">
+    <view class="title">已报名(3人)</view>
+    <view class="">
+      <image src="../../resources/images/arrow.png"></image>
+    </view>
+  </view>
+  <view class="person">
+    <view class="item">
+      <view>
+        <image src="http://mvimg1.meitudata.com/569c5c70b665b5106.jpg"></image>
+      </view>
+      <view style="margin-left:20rpx">小仙女</view>
+      <view class="time">今天12:00</view>
+    </view>
+    <view class="line"></view>
+    <view class="item">
+      <view>
+        <image src="http://mvimg1.meitudata.com/569c5c70b665b5106.jpg"></image>
+      </view>
+      <view style="margin-left:20rpx">小仙女</view>
+      <view class="time">今天12:00</view>
+    </view>
+    <view class="line"></view>
+    <view class="item">
+      <view>
+        <image src="http://mvimg1.meitudata.com/569c5c70b665b5106.jpg"></image>
+      </view>
+      <view style="margin-left:20rpx">小仙女</view>
+      <view class="time">今天12:00</view>
+    </view>
+    <view class="line"></view>
+    <view class="item">
+      <view>
+        <image src="http://mvimg1.meitudata.com/569c5c70b665b5106.jpg"></image>
+      </view>
+      <view style="margin-left:20rpx">小仙女</view>
+      <view class="time">今天12:00</view>
+    </view>
+    <view class="line"></view>
+    <view class="item">
+      <view>
+        <image src="http://mvimg1.meitudata.com/569c5c70b665b5106.jpg"></image>
+      </view>
+      <view style="margin-left:20rpx">小仙女</view>
+      <view class="time">今天12:00</view>
+    </view>
+  </view>
+</view>
+<view class="brtn">
+  <button class="btn">我要报名</button>
+</view>
+
+<view style='margin-bottom:120rpx'>
+  <view class='leaveMsg'>
+    <view style='color:#999999;font-size:30rpx'>活动留言</view>
+    <view style='color:#8285a2;font-size:33rpx'>写留言</view>
+  </view>
+  <view class='content'>
+    <view class='detail'>
+      <view class='face'>
+        <image src='http://mvimg1.meitudata.com/569c5c70b665b5106.jpg'></image>
+      </view>
+      <view class='right'>
+        <view class='title'>
+          <view>
+            <text>小仙女</text>
+          </view>
+          <view>
+            <image src='../../resources/images/heart.png'></image>
+            <text>12</text>
+          </view>
+        </view>
+        <view class='substance'>
+          参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动
+        </view>
+      </view>
+    </view>
+
+    <view class='detail'>
+      <view class='face'>
+        <image src='http://mvimg1.meitudata.com/569c5c70b665b5106.jpg'></image>
+      </view>
+      <view class='right'>
+        <view class='title'>
+          <view>
+            <text>小仙女</text>
+          </view>
+          <view>
+            <image src='../../resources/images/heart.png'></image>
+            <text>12</text>
+          </view>
+        </view>
+        <view class='substance'>
+          参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动参加活动
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

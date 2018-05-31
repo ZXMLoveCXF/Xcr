@@ -1,0 +1,33 @@
+/* pages/fill/fill.wxss */
+.submit{
+    background-color: #f39700;
+    color: #fff;
+    height: 80rpx;
+    width: 690rpx;
+    margin: 0 auto;
+    margin-top: 30rpx;
+}
+textarea{
+    width: 650rpx;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-top: 30rpx;
+    padding: 20rpx;
+    position: relative;
+}
+page{
+    background-color: #efeff4
+}
+text{
+    position: absolute;
+    bottom: 20rpx;
+    right: 20rpx;
+}
+input{
+    background-color: #fff;
+    width: 660rpx;
+    margin: 0 auto;
+    margin-top: 30rpx;
+    height: 80rpx;
+    padding-left: 30rpx;
+}

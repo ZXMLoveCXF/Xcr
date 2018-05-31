@@ -1,0 +1,64 @@
+/* pages/publish/publish.wxss */
+page {  
+  background-color: #efeff4;  
+}  
+.banner{
+  width: 690rpx;
+  margin-left: 30rpx;
+  height: 260rpx;
+  margin-top: 20rpx
+}
+.title{
+  margin-left: 30rpx;
+  font-size: 35rpx;
+  color: rgb(112, 112, 112);
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  width: 690rpx;
+}
+.baseInfo{
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  position: relative;
+}
+.baseInfo .label{
+  margin-left: 30rpx;
+}
+.baseInfo .content{
+  margin-right: 65rpx
+}
+.baseInfo .content text{
+  color: #ccc;
+  margin-right: 10rpx
+}
+.baseInfo .content image{
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 50%;
+  right: 30rpx;
+  transform: translateY(-50%)
+}
+.baseInfo .content switch{
+  margin-right: -35rpx
+}
+.thickLine{
+  height: 2rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+  background-color: #f1f1f1
+}
+.submit{
+  background-color: #f39700;
+  color: #fff;
+  font-size: 30rpx;
+  width: 690rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx
+}

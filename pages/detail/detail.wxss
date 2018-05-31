@@ -1,0 +1,150 @@
+/* pages/detail/detail.wxss */
+
+page {
+  background-color: #f0f0f0;
+}
+
+.banner {
+  width: 100%;
+  height: 385rpx;
+}
+
+.act-title {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #ccc;
+  background-color: #fff;
+  padding-left: 30rpx;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+}
+
+.act-title .a-title .title {
+  font-size: 36rpx;
+  color: #000;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+}
+
+.a-title {
+  display: flex;
+  justify-content: space-between;
+  width: 690rpx;
+}
+
+.a-title image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.album {
+  display: flex;
+  justify-content: space-between;
+  width: 690rpx;
+}
+
+.album image {
+  width: 10%;
+  height: 40rpx;
+}
+
+.person {
+  width: 690rpx;
+}
+
+.person .item {
+  display: flex;
+  align-content: center;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+}
+
+.person .item image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+}
+
+.time {
+  position: absolute;
+  right: 0;
+}
+
+.line {
+  width: 100%;
+  height: 2rpx;
+  background-color: #eee;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  padding-right: 30rpx;
+}
+
+.brtn {
+  border-top: 2rpx solid #ddd;
+  position: fixed;
+  bottom: 0;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+.btn {
+  background-color: #f39800;
+  color: #fff;
+  height: 100rpx;
+  width: 690rpx;
+  margin: 0 auto;
+}
+
+.leaveMsg {
+  height: 40rpx;
+  line-height: 40rpx;
+  margin: 0 auto;
+  width: 690rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+  margin-top: 40rpx;
+}
+
+.content {
+  width: 690rpx;
+  margin: 0 auto;
+}
+
+.content .detail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx
+}
+
+.content .detail .face {
+  width: 100rpx;
+}
+
+.content .right {
+  flex: 1;
+}
+
+.content .detail .face image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+}
+
+.content .detail .title {
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.content .detail .title image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}

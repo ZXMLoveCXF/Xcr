@@ -1,0 +1,62 @@
+/* pages/join/join.wxss */
+page{
+    background-color: #efeff4
+}
+.content{
+    background-color: #fff;
+    width: 100%;
+    border-top: 2rpx solid #eee;
+    margin-top: 30rpx
+}
+.tool{
+    display: flex;
+    justify-content: space-between;
+    height: 100rpx;
+    line-height: 100rpx
+}
+.tool .label{
+    margin-left: 30rpx;
+    width: 180rpx;
+    font-size: 34rpx
+}
+.tool .input{
+    flex: 1;
+}
+.tool .input input{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 34rpx
+}
+.tool .btn text{
+    margin-right: 30rpx;
+    color: #f39700;
+    border-bottom: 1px solid #f39700;
+    font-size: 34rpx;
+    flex: 1
+}
+.line{
+    background-color: #f1f1f1;
+    height: 2rpx;
+    width: 100%;
+    margin-left: 30rpx
+}
+.agree{
+    text-align:center;
+    margin-top: 30rpx;
+    font-size: 24rpx
+}
+.agree text{
+    color: #f39700;
+}
+.agree checkbox{
+    zoom:60%
+}
+.submit{
+    width: 690rpx;
+    background-color: #f39700;
+    color: #fff;
+    height: 100rpx;
+    line-height: 100rpx;
+    margin-top: 30rpx
+}

@@ -1,0 +1,83 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.98",
+	"appid": "wxaa1cde4ecb06a7e3",
+	"projectname": "Xcr",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "发布活动",
+					"pathName": "pages/publish/publish",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "选择主题图片",
+					"pathName": "pages/poster/poster",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "填写",
+					"pathName": "pages/fill/fill",
+					"query": "type=name"
+				},
+				{
+					"id": -1,
+					"name": "地图",
+					"pathName": "pages/location/location",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "活动报名",
+					"pathName": "pages/join/join",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "活动详情",
+					"pathName": "pages/detail/detail",
+					"query": "id=22"
+				},
+				{
+					"id": -1,
+					"name": "活动相册",
+					"pathName": "pages/album/album",
+					"query": ""
+				}
+			]
+		}
+	}
+}

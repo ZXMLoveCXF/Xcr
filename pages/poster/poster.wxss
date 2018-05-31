@@ -1,0 +1,33 @@
+/* pages/poster/poster.wxss */
+.preImg{
+    width: 100%;
+    height: 400rpx;
+}
+.allPoster{
+    width: 690rpx;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.allPoster .poster{
+    width: 30%;
+    margin-top: 30rpx
+}
+.allPoster .poster image{
+    width: 100%;
+    border-radius: 10rpx;
+    border: 4rpx solid #fff;
+    height: 120rpx;
+}
+.allPoster .poster image.active{
+    width: 100%;
+    border: 4rpx solid #f39700
+}
+.submit{
+    background-color: #f39700;
+    color: #fff;
+    height: 80rpx;
+    margin-top: 30rpx;
+    width: 690rpx;
+}

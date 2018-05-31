@@ -1,0 +1,52 @@
+{
+  "pages":[
+    "pages/main/main",
+    "pages/publish/publish",
+    "pages/index/index",
+    "pages/poster/poster",
+    "pages/fill/fill",
+    "pages/location/location",
+    "pages/join/join",
+    "pages/detail/detail",
+    "pages/album/album"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#f79400",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "跑团",
+        "iconPath": "/resources/images/run.png",
+        "selectedIconPath": "/resources/images/run.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "预约",
+        "iconPath": "/resources/images/time.png",
+        "selectedIconPath": "/resources/images/time.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "活动",
+        "iconPath": "/resources/images/act.png",
+        "selectedIconPath": "/resources/images/act_active.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "我",
+        "iconPath": "/resources/images/mine.png",
+        "selectedIconPath": "/resources/images/mine.png"
+      }
+    ]
+  }
+}

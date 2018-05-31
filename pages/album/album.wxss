@@ -1,0 +1,36 @@
+/* pages/album/album.wxss */
+.title{
+    font-size: 36rpx;
+    font-weight: bold;
+    width: 690rpx;
+    margin: 0 auto;
+    padding-top: 30rpx
+}
+.stitle{
+    color: #ccc;
+    width: 690rpx;
+    margin: 0 auto;
+    margin-top: 20rpx;
+}
+.content{
+    width: 100%;
+    background-color: #fff
+}
+.images{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 690rpx;
+    margin: 0 auto;
+    margin-top: 20rpx
+}
+.images image{
+    margin-bottom: 20rpx;
+    width: 30%;
+    height: 120rpx;
+}
+.line{
+    background-color: #eee;
+    height: 20rpx;
+    width: 100%;
+}

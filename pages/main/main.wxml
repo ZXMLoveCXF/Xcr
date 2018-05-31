@@ -1,0 +1,21 @@
+<!--pages/main/main.wxml-->
+<block wx:for="{{ actListData }}">
+  <view class="act-list" data-id="{{item.activityId }}" >
+    <view class="act-one" bindtap="toDetail">
+      <view class="act-img-box">
+        <!-- <image src="{{ item.mainImagePath }}"></image> -->
+         <image src="{{ item.mainImagePath }}"></image>
+      </view>
+      <view class="act-content-box title">
+        {{ item.activityName }}
+      </view>
+      <view class="act-content-box detail">
+        {{ item.locationName }}
+      </view>
+      <view class="act-content-box time">
+        <text class='orang'>({{ item.activityTimeStatus }})</text>{{ item.activityTime }}
+      </view>
+    </view>
+  </view>
+</block>
+<button class='addAct' open-type="getUserInfo" bindgetuserinfo="getWxUser">+</button>

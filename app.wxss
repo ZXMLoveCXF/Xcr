@@ -1,0 +1,10 @@
+/**app.wxss**/
+.container {
+  box-sizing: border-box;
+  margin-bottom: 100rpx;
+}
+
+page {
+  font-size: 30rpx;
+  background-color: #efeff4;
+}

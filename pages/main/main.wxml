@@ -1,6 +1,6 @@
 <!--pages/main/main.wxml-->
 <block wx:for="{{ actListData }}">
-  <view class="act-list" data-id="{{item.activityId }}" >
+  <view class="act-list" data-id="{{item.activityId }}" bindtap='naTo' >
     <view class="act-one" bindtap="toDetail">
       <view class="act-img-box">
         <!-- <image src="{{ item.mainImagePath }}"></image> -->

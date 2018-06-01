@@ -94,6 +94,8 @@ Page({
           app.resErrMsg2('获取数据失败', res);
           return false;
         }
+        var that = this;
+        that.getDetailData(that.data.id);
 
       }, null, 'POST', that.data.token
     )

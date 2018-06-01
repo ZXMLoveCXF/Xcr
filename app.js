@@ -292,7 +292,7 @@ App({
         console.log(token)
         if (token && !loginFlg) {//不需要重新登录
           //看初始化信息是否存在
-          
+          callback();
         } else { //需要重新登录
           that.userLogin(callback)
         }

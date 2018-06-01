@@ -49,9 +49,9 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    // app.checkLogin(function () {
+    app.checkLogin(function () {
       that.getActList(1);
-    // })
+    })
   },
 
   /**

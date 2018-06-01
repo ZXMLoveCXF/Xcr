@@ -37,6 +37,15 @@ Page({
 
   },
   /**
+   * naToDetail
+   */
+  naTo(e){
+    console.log(e);
+    wx.navigateTo({
+      url: '../detail/detail?id=' + e.currentTarget.dataset.id,
+    })
+  },
+  /**
    * jump
    */
   jump() {

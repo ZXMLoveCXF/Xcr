@@ -7,6 +7,7 @@ Page({
    */
   data: {
     result:{},
+    id: '',
     token: '',
   },
 
@@ -18,9 +19,9 @@ Page({
     var token = app.getCache("token");
     var that = this;
     that.setData({
-      token: token
+      token: token,
+      id: id
     })
-    that.getDetailData(id);
   },
   /**
    * 获取活动详情
@@ -56,8 +57,9 @@ Page({
    * 写留言
    */
   setMessage: function () {
+    var that = this;
     wx.navigateTo({
-      url: 'message/message',
+      url: 'message/message?activityId=' + that.data.id + '&activityName=' + that.data.result.activityName,
     })
   },
 
@@ -65,41 +67,22 @@ Page({
    * 我要报名
    */
   signUp: function(){
-    var that = this;
-    app.reqServerData(
-      app.config.baseUrl + 'api/activity/signup',
-      {
-        "activityId": id,
-        "mobileNo": mobileNo,
-        "verificationCode": '5732',
-        "userRealName":'张三',
-        "userIDNo":'350532197501222020'
-      },
-      function (res) {
-        console.log(res);
-        if (res.statusCode != 200) {
-          app.resErrMsg1('温馨提示', res.errMsg);
-          return false;
-        }
-        if (res.data.errorCode != 200) {
-          app.resErrMsg2('获取数据失败', res);
-          return false;
-        }
-
-      }, null, 'POST', that.data.token
-    )
+    wx.navigateTo({
+      url: '../join/join?activityId=' + this.data.id,
+    })
   },
 
   /**
-   * 留言
+   * 点赞
    */
-  setComment: function () {
+  heart: function (e) {
+    console.log(e.currentTarget.dataset.commentid);
     var that = this;
     app.reqServerData(
-      app.config.baseUrl + 'api/activitycomment/create',
+      app.config.baseUrl + 'api/activitycomment/like',
       {
-        "activityId": id,
-        "commentContent": commentContent
+        "activityId": that.data.id,
+        "commentId": e.currentTarget.dataset.commentid
       },
       function (res) {
         console.log(res);
@@ -127,7 +110,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    var that = this;
+    that.getDetailData(that.data.id);
   },
 
   /**

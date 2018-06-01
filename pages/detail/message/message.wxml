@@ -1,5 +1,7 @@
 <!--pages/detail/message/message.wxml-->
-<view class='actName'>大法师</view>
-<textarea class='msg'></textarea>
-<button class='btn'>留言</button>
+<view class='actName'>{{activityName}}</view>
+<form bindsubmit='setMsg'>
+  <textarea name='msg' class='msg'></textarea>
+  <button class='btn' form-type="submit">留言</button>
+</form>
 

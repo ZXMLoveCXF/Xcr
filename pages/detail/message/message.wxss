@@ -5,6 +5,9 @@
 }
 .msg{
   background-color: white;
+  width: 100%;
+  margin-bottom: 40rpx;
+  padding: 0 30rpx;
 }
 .btn {
   background-color: #f39800;

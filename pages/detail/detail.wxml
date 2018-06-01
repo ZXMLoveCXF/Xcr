@@ -41,7 +41,7 @@
   </view>
 </view>
 <view class="brtn">
-  <button class="btn">我要报名</button>
+  <button class="btn" bindtap='signUp'>我要报名</button>
 </view>
 
 <view style='margin-bottom:120rpx'>
@@ -60,7 +60,7 @@
             <view>
               <text>{{ item.userNickName }}</text>
             </view>
-            <view>
+            <view bindtap='heart' data-commentid='{{ item.commentId }}'>
               <image src='../../resources/images/heart.png'></image>
               <text>{{ item.commentLikeTimes }}</text>
             </view>

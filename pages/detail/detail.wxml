@@ -61,7 +61,7 @@
               <text>{{ item.userNickName }}</text>
             </view>
             <view bindtap='heart' data-commentid='{{ item.commentId }}'>
-              <image wx:if='' src='../../resources/images/heart.png'></image>
+              <image wx:if='{{ item.liked == 0 }}' src='../../resources/images/heart.png'></image>
               <image wx:else src='../../resources/images/heart1.png'></image>
               <text>{{ item.commentLikeTimes }}</text>
             </view>

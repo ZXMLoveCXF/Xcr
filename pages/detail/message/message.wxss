@@ -1,0 +1,15 @@
+/* pages/detail/message/message.wxss */
+.actName{
+  padding: 0 30rpx;
+  line-height: 100rpx;
+}
+.msg{
+  background-color: white;
+}
+.btn {
+  background-color: #f39800;
+  color: #fff;
+  height: 100rpx;
+  width: 690rpx;
+  margin: 0 auto;
+}

@@ -34,12 +34,13 @@ App({
    * param failCallback  请求失败user的回调函数
    * param method 请求方式，默认GET  // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
    */
-  reqServerData: function (url, data, succCallback, failCallback, method) {
+  reqServerData: function (url, data, succCallback, failCallback, method, token) {
     method = method ? method : 'GET'
-    var header = { 'Content-Type': 'application/json' }
+    var header = { 'Content-Type': 'application/json', 'token': token }
     if (method == 'POST') {
       header = {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'token': token
       }
     }
     wx.request({

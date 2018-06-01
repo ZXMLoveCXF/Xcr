@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/main/main",
     "pages/publish/publish",
     "pages/index/index",
@@ -8,13 +8,14 @@
     "pages/location/location",
     "pages/join/join",
     "pages/detail/detail",
-    "pages/album/album"
+    "pages/album/album",
+    "pages/detail/message/message"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#888",

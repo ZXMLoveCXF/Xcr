@@ -18,7 +18,12 @@ Page({
     needRealName: 0,
     needIDNo: 0,
     name: '请选择活动地点',
-    address:''
+    address: ''
+    , location: {
+      latitude: null,
+      longitude: null
+    },
+    fillTime:false
   },
   /**
    * submit
@@ -34,6 +39,29 @@ Page({
     var locationLongitude = that.data.location.longitude;
     var activityDesc = app.getCache('activityDesc');
     var participantNumberLimit = app.getCache('participantNumberLimit');
+
+    if (!activityName) {
+      app.showMsgModel('温馨提示', '请输入活动名称');
+      return false;
+    }
+    if (!that.data.bSelectTime) {
+      app.showMsgModel('温馨提示', '请输入活动时间');
+      return false;
+    }
+    if (locationName == '请选择活动地点') {
+      app.showMsgModel('温馨提示', '请选择活动地点');
+      return false;
+    }
+    if (!activityDesc) {
+      app.showMsgModel('温馨提示', '请输入活动简介');
+      return false;
+    }
+    if (!participantNumberLimit) {
+      app.showMsgModel('温馨提示', '请输入活动参与人数限制');
+      return false;
+    }
+
+
     //请求进行中列表数据
     app.reqServerData(
       app.config.baseUrl + 'api/activity/create',
@@ -47,7 +75,7 @@ Page({
         "activityDesc": activityDesc,
         "mainImageGuid": that.data.uploadedId,
         "allowComment": that.data.allowComment,
-        "participantNumberLimit": "测试88",
+        "participantNumberLimit": participantNumberLimit,
         "needRealName": that.data.needRealName,
         "needIDNo": that.data.needIDNo
       },
@@ -61,6 +89,11 @@ Page({
           app.resErrMsg2('获取数据失败', res);
           return false;
         }
+
+        app.delCache('postSrc');
+        app.delCache('activityName');
+        app.delCache('activityDesc');
+        app.delCache('participantNumberLimit');
 
         console.log(res.data.result.activityId);
         wx.redirectTo({

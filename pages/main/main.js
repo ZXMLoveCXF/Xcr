@@ -40,7 +40,7 @@ Page({
    * jump
    */
   jump() {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '../publish/publish',
     })
   },

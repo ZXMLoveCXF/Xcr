@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -60,10 +60,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 4,
 					"name": "活动报名",
 					"pathName": "pages/join/join",
-					"query": ""
+					"query": "activityId=24"
 				},
 				{
 					"id": 5,

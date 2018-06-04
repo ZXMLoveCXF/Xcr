@@ -40,8 +40,13 @@
     </block>
   </view>
 </view>
-<view class="brtn">
+<view class="brtn" wx:if="{{ user.isManager == 0 }}">
   <button class="btn" bindtap='signUp'>我要报名</button>
+</view>
+
+<view class="brtn" wx:if="{{ user.isManager == 1 }}">
+  <button class="btn-1" bindtap='edit'>活动修改</button>
+  <button class="btn-2" bindtap='chooseImage'>上传照片</button>
 </view>
 
 <view style='margin-bottom:120rpx'>

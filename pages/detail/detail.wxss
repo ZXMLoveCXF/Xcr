@@ -99,6 +99,26 @@ page {
   margin: 0 auto;
 }
 
+.btn-1 {
+  background-color: #f39800;
+  color: #fff;
+  height: 100rpx;
+  width: 330rpx;
+  margin: 0 auto;
+  float: left;
+  margin-left: 30rpx;
+}
+
+.btn-2 {
+  background-color: #f39800;
+  color: #fff;
+  height: 100rpx;
+  width: 330rpx;
+  margin: 0 auto;
+  float: right;
+  margin-right: 30rpx;
+}
+
 .leaveMsg {
   height: 40rpx;
   line-height: 40rpx;

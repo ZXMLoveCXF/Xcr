@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    result:{},
+    uploadedImg: '',
+    uploadedId: '',
+    result: {},
     id: '',
     token: '',
   },
@@ -25,9 +27,32 @@ Page({
     })
   },
   /**
+   * edit active
+   */
+  edit(){
+    wx.navigateTo({
+      url: '../publish/publish?id=' + id + '&type=edit',
+    })
+  },
+  /**
+ * choose image
+ */
+  chooseImage: function () {
+    var that = this
+    wx.chooseImage({
+      count: 9,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: function (res) {
+        console.log(res);
+        upload(that, res.tempFilePaths);
+      }
+    })
+  },
+  /**
    * 获取活动详情
    */
-  getDetailData(id){
+  getDetailData(id) {
     var that = this;
     //
     app.reqServerData(
@@ -46,11 +71,13 @@ Page({
           return false;
         }
         var result = res.data.result.activityDetails;
-        
+        var user = res.data.result.user;
+
         that.setData({
-          result: result
+          result: result,
+          user: user
         })
-      },null,null,that.data.token
+      }, null, null, that.data.token
     )
   },
 
@@ -67,7 +94,7 @@ Page({
   /**
    * 我要报名
    */
-  signUp: function(){
+  signUp: function () {
     wx.navigateTo({
       url: '../join/join?activityId=' + this.data.id,
     })
@@ -105,7 +132,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
@@ -120,34 +147,193 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })
+
+function upload(page, pathes) {
+  wx.showToast({
+    icon: "loading",
+    title: "正在上传"
+  })
+
+  var path = pathes.shift(pathes)
+
+  console.log(path);
+
+  var initData = app.getCache('initdata')
+  var token = app.getCache('token')
+  wx.uploadFile({
+    url: app.config.baseUrl + 'api/image/upload',
+    filePath: path,
+    name: 'fieldNameHere',
+    header: { "Content-Type": "multipart/form-data" },
+    success: function (res) {
+      console.log('---------------------------UPLOAD complete');
+      console.log(res);
+      if (res.statusCode != 200) {
+        app.showMsgModel('上传失败', res.errMsg + '(statusCode=' + res.statusCode + ')')
+        return
+      }
+
+      var data = JSON.parse(res.data)
+      if (data.errorCode != 200) {
+        app.showMsgModel('上传失败', 'status=' + res.data.status)
+        return
+      }
+      data = data.result;
+
+      page.setData({
+        uploadedId: data.guid,
+        uploadedImg: data.imageUrl,
+        sSelectedSrc: data.imageUrl,
+        sIndex: -1
+      })
+
+    },
+    fail: function (e) {
+      console.log(e);
+      wx.showModal({
+        title: '提示',
+        content: '上传失败(' + e.errMsg + '), 上传已被终止, 请重新上传',
+        showCancel: false
+      })
+    },
+    complete: function () {
+      wx.hideToast();  //隐藏Toast
+    }
+  })
+}
+
+var uploadedImgs = [], uploadedIds = [], aTempIds = [];
+
+function upload(page, pathes) {
+
+  wx.showToast({
+    icon: "loading",
+    title: "正在上传"
+  })
+
+  var path = pathes.shift(pathes)
+
+  var initData = app.getCache('initdata')
+  var token = app.getCache('token')
+  wx.uploadFile({
+    url: app.config.baseUrl + 'api/image/upload',
+    filePath: path,
+    name: 'file',
+    header: { "Content-Type": "multipart/form-data" },
+    formData: {
+      token: token
+    },
+    success: function (res) {
+      console.log('---------------------------UPLOAD complete');
+      console.log(res);
+      if (res.statusCode != 200) {
+        app.showMsgModel('上传失败', res.errMsg + '(statusCode=' + res.statusCode + ')')
+        return
+      }
+
+      var data = JSON.parse(res.data)
+      if (data.status != 0) {
+        app.showMsgModel('上传失败', 'status=' + res.data.status)
+        return
+      }
+
+      var data = data.data;
+      uploadedIds = page.data.uploadedIds;
+      uploadedImgs = page.data.uploadedImgs;
+      uploadedIds.unshift(data.id);
+      console.log(uploadedIds);
+      aTempIds.unshift(data.id);
+      console.log(aTempIds);
+      uploadedImgs.unshift({
+        imgUrl: path,
+        id: data.id
+      })
+      console.log(uploadedImgs);
+      console.log(uploadedImgs)
+      console.log(uploadedIds)
+      page.setData({  //上传成功修改显示图片
+        uploadedIds: uploadedIds,
+        uploadedImgs: uploadedImgs
+        // ,isShowAddImg: (uploadedIds.length < 9)
+      })
+      //继续上传
+      if (pathes.length > 0) {
+        upload(page, pathes)
+      } else {
+        //请求进行中列表数据
+        app.reqServerData(
+          app.config.baseUrl + 'active/album/upload',
+          {
+            token: token
+            , activeId: actId
+            , imgids: aTempIds.join('|')
+          },
+          function (res) {
+            console.log(res);
+            if (res.statusCode != 200) {
+              app.resErrMsg1('温馨提示', res.errMsg);
+              return false;
+            } else {
+              wx.showToast({
+                title: '上传成功',
+              })
+              aTempIds = [];
+
+              var navData = page.data.navData,
+                albumCount = res.data.data.albumCount;
+              if (albumCount > 0) {
+                navData[2].title = '活动相册(' + albumCount + ')';
+              }
+
+              page.setData({
+                navData: navData
+              })
+            }
+          }
+        )
+      }
+    },
+    fail: function (e) {
+      console.log(e);
+      wx.showModal({
+        title: '提示',
+        content: '上传失败(' + e.errMsg + '), 上传已被终止, 请重新上传',
+        showCancel: false
+      })
+    },
+    complete: function () {
+      wx.hideToast();  //隐藏Toast
+    }
+  })
+}

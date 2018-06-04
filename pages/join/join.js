@@ -71,7 +71,7 @@ Page({
         })
         setTimeout(function(){
           wx.redirectTo({
-            url: '',
+            url: '../detail/detail?id=' + that.data.activityId,
           })
         },2000)
 

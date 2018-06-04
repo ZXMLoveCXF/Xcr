@@ -75,7 +75,7 @@ Page({
           })
         },2000)
 
-      }, null, 'POST', that.data.token
+      }, null, 'POST', app.getCache("token")
     )
   },
   /**

@@ -48,7 +48,7 @@ Page({
       app.showMsgModel('温馨提示', '请输入活动时间');
       return false;
     }
-    if (locationName == '请选择活动地点') {
+    if (locationName == '请选择活动地点' ) {
       app.showMsgModel('温馨提示', '请选择活动地点');
       return false;
     }

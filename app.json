@@ -43,7 +43,7 @@
         "selectedIconPath": "/resources/images/act_active.png"
       },
       {
-        "pagePath": "pages/main/main",
+        "pagePath": "pages/index/index",
         "text": "我",
         "iconPath": "/resources/images/mine.png",
         "selectedIconPath": "/resources/images/mine.png"

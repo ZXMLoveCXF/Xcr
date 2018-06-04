@@ -1,4 +1,5 @@
 // pages/join/join.js
+var app = getApp();
 Page({
 
   /**
@@ -22,6 +23,7 @@ Page({
    */
   submit(e) {
     console.log(e);
+    var that = this;
     var _value = e.detail.value, mobileNo = _value.phone, verificationCode = _value.code, userRealName = _value.name, userIDNo = _value.IDcard, activityId = this.data.activityId;
     console.log(mobileNo, verificationCode, userRealName, userIDNo);
     if (!userRealName) {

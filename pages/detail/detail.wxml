@@ -9,7 +9,7 @@
   <view class="title">活动简介</view>
   <view style="width: 690rpx;">{{ result.activityDesc }}</view>
 </view>
-<view wx:if="{{ result.activityImages.length }}" class="act-title">
+<view wx:if="{{ result.activityImages.length }}" bindtap='toAlbum' class="act-title">
   <view class="a-title">
     <view class="title">活动相册</view>
     <view class="">
@@ -17,10 +17,12 @@
     </view>
   </view>
   <view class="album">
-    <image wx:for="{{ result.activityImages }}" src="{{ item.imageUrl }}"></image>
+    <block wx:for="{{ result.activityImages }}">
+      <image wx:if="{{ index < 8  }}" src="{{ item.imageUrl }}"></image>
+    </block>
   </view>
 </view>
-<view wx:if="{{ result.activityUsers.length }}" class="act-title">
+<view wx:if="{{ result.activityUsers.length }}" class="act-title" bindtap='toUser'>
   <view class="a-title">
     <view class="title">已报名({{ result.activityUsers.length }}人)</view>
     <view class="">
@@ -36,7 +38,7 @@
         <view style="margin-left:20rpx">{{ item.nickName }}</view>
         <view class="time">{{ item.signupTime }}</view>
       </view>
-      <view class="line"></view>
+      <view wx:if="{{ index != (result.activityUsers.length - 1) }}" class="line"></view>
     </block>
   </view>
 </view>

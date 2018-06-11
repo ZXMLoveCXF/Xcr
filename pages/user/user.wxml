@@ -1,0 +1,18 @@
+<!--pages/user/user.wxml-->
+
+<view class="act-title">
+  <view class='title'>已报名({{ totalCount }}人)</view>
+  <view class='person'>
+    <block wx:for="{{ actList }}">
+      <view class="item">
+        <view>
+          <image src="{{ item.avatarUrl }}"></image>
+        </view>
+        <view style="margin-left:20rpx">{{ item.nickName }}</view>
+        <view class="time">{{ item.signupTime }}</view>
+      </view>
+      <!-- <view wx:if="{{ index != (resultList.length - 1) }}" class="line"></view> -->
+      <view class="line"></view>
+    </block>
+  </view>
+</view>

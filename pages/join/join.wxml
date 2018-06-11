@@ -17,9 +17,9 @@
     <view class="tool">
       <view class="label">手机号</view>
       <view class="input">
-        <input type="number" name="phone" maxlength='11' placeholder="请输入您的手机号"></input>
+        <input type="number" bindinput='getPhone' name="phone" maxlength='11' placeholder="请输入您的手机号"></input>
       </view>
-      <view class="btn">
+      <view class="btn" bindtap="code">
         <text>获取验证码</text>
       </view>
     </view>

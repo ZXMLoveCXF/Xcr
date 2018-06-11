@@ -7,9 +7,47 @@ Page({
    */
   data: {
     activityId:'',
-    checked:false
+    checked:false,
+    phoneNumber:''
   },
+  /**
+   * getPhone
+   */
+  getPhone(e){
+      console.log(e.detail.value);
+      this.setData({
+        phoneNumber: e.detail.value
+      })
+  },
+  /**
+   * code
+   */
+  code(){
+    var that = this;
+    var mobileNo = that.data.phoneNumber;
+    if (!mobileNo || mobileNo.length != 11) {
+      app.showMsgModel('温馨提示', '手机号输入有误');
+      return false;
+    }
+    app.reqServerData(
+      app.config.baseUrl + 'api/sms/send',
+      {
+        "mobileNo": that.data.phoneNumber
+      },
+      function (res) {
+        console.log(res);
+        if (res.statusCode != 200) {
+          app.resErrMsg1('温馨提示', res.errMsg);
+          return false;
+        }
+        if (res.data.errorCode != 200) {
+          app.resErrMsg2('获取数据失败', res);
+          return false;
+        }
 
+      }, null, 'GET', app.getCache("token")
+    )
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -75,7 +113,7 @@ Page({
           })
         },2000)
 
-      }, null, 'POST', that.data.token
+      }, null, 'POST', app.getCache("token")
     )
   },
   /**

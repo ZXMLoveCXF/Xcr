@@ -10,6 +10,7 @@
     "pages/detail/detail",
     "pages/album/album",
     "pages/detail/message/message"
+    ,"pages/user/user"
   ],
   "window": {
     "backgroundTextStyle": "light",

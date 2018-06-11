@@ -36,10 +36,10 @@
 			"current": -1,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "发布活动",
 					"pathName": "pages/publish/publish",
-					"query": ""
+					"query": "id=22&type=edit"
 				},
 				{
 					"id": -1,
@@ -72,10 +72,10 @@
 					"query": "id=22"
 				},
 				{
-					"id": -1,
+					"id": 6,
 					"name": "活动相册",
 					"pathName": "pages/album/album",
-					"query": ""
+					"query": "id=22"
 				}
 			]
 		}

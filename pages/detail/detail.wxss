@@ -10,7 +10,7 @@ page {
 }
 
 .act-title {
-  margin-top: 30rpx;
+  margin-top: 20rpx;
   font-size: 28rpx;
   color: #ccc;
   background-color: #fff;
@@ -19,7 +19,7 @@ page {
   padding-top: 10rpx;
 }
 
-.act-title .a-title .title {
+.act-title .a-title .title, .act-title .title {
   font-size: 36rpx;
   color: #000;
   margin-bottom: 10rpx;
@@ -39,13 +39,18 @@ page {
 
 .album {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 690rpx;
 }
 
 .album image {
   width: 10%;
   height: 40rpx;
+  margin-right: 2.8%;
+}
+
+.album image:nth-child(8) {
+  margin-right: 0;
 }
 
 .person {
@@ -138,7 +143,7 @@ page {
 .content .detail {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30rpx
+  margin-bottom: 30rpx;
 }
 
 .content .detail .face {

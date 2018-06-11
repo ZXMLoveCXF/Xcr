@@ -85,7 +85,8 @@ App({
               //记录token
               that.globalData.token = re.data.result.token
               that.setCache('token', re.data.result.token)
-              that.setCache('time', new Date().getTime())
+              that.setCache('time', new Date().getTime());
+              callback();
               // that.getWxUser('',callback)
               // that.initData('', '', callback);
             } else {

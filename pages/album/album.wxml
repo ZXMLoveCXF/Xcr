@@ -1,34 +1,19 @@
-<!-- pages/album/album.wxml -->
 <view class="content">
-    <view class="title">321活动</view>
-    <view class="stitle">2018-02-03</view>
+  <view class="title">{{ name }}</view>
+  <block wx:for="{{ result }}">
+    <view class="stitle">{{ item.imageUploadDate }}</view>
     <view class="images">
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
+      <block wx:for="{{ item.images }}">
+        <image class="action" src="{{ item.imageUrl }}"></image>
+      </block>
     </view>
-
-    <view class="line"></view>
-    <view class="stitle">2018-02-03</view>
-    <view class="images">
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg"></image>
-    </view>
+  </block>
 </view>
+
+<!-- <scroll-view bindscroll="scroll" style="height:{{ _height }}px;" class="content" scroll-y="true">
+  <view class="images">
+    <block wx:for="{{ productArr }}" wx:key="productlist">
+      <image class="{{arr[index] ? 'action':''}}" src="{{arr[index] ?  productArr[index].url : 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526963152790&di=2eeb6e9c16ddbbf5e04409f751b33764&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01025958635af2a801219c773b64ed.jpg'}}"></image>
+    </block>
+  </view>
+</scroll-view> -->

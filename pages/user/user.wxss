@@ -1,0 +1,48 @@
+/* pages/user/user.wxss */
+page{
+  background-color: #f0f0f0
+}
+.act-title {
+  margin-top: 20rpx;
+  font-size: 28rpx;
+  color: #ccc;
+  padding-left: 30rpx;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+}
+.act-title .title{
+  font-size: 30rpx;
+  color: #000
+}
+.person {
+  width: 690rpx;
+}
+
+.person .item {
+  display: flex;
+  align-content: center;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+}
+
+.person .item image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+}
+
+.time {
+  position: absolute;
+  right: 0;
+}
+
+.line {
+  width: 100%;
+  height: 2rpx;
+  background-color: #ddd;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  padding-right: 30rpx;
+}

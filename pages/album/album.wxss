@@ -1,36 +1,49 @@
 /* pages/album/album.wxss */
-.title{
-    font-size: 36rpx;
-    font-weight: bold;
-    width: 690rpx;
-    margin: 0 auto;
-    padding-top: 30rpx
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  width: 690rpx;
+  margin: 0 auto;
+  padding-top: 30rpx;
 }
-.stitle{
-    color: #ccc;
-    width: 690rpx;
-    margin: 0 auto;
-    margin-top: 20rpx;
+
+.stitle {
+  color: #ccc;
+  width: 690rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
 }
-.content{
-    width: 100%;
-    background-color: #fff
+
+.content {
+  width: 100%;
+  background-color: #fff;
 }
-.images{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 690rpx;
-    margin: 0 auto;
-    margin-top: 20rpx
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  width: 690rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
 }
-.images image{
-    margin-bottom: 20rpx;
-    width: 30%;
-    height: 120rpx;
+
+.images image {
+  margin-bottom: 20rpx;
+  width: 30%;
+  height: 120rpx;
+  opacity: 0;
+  transition: opacity .5s linear 1s;
 }
-.line{
-    background-color: #eee;
-    height: 20rpx;
-    width: 100%;
+.images image:nth-child(3n-2),.images image:nth-child(3n-1){
+  margin-right: 5%
+}
+.images image.action{
+    opacity: 1;
+}
+
+.line {
+  background-color: #eee;
+  height: 20rpx;
+  width: 100%;
 }

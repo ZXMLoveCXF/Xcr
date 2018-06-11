@@ -13,7 +13,7 @@
   <view class="content">
     <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
       <view>
-        <text wx:if="{{ !bSelectTime }}">请选择活动时间</text>
+        <text wx:if="{{ !bSelectTime }}">{{ activityTime }}</text>
         <block wx:if="{{ bSelectTime }}">
           {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
         </block>
@@ -42,7 +42,7 @@
 <view class="baseInfo">
   <view class="label">允许评论</view>
   <view class="content">
-    <switch data-type="allowComment" color="#f39700" bindchange="comment" />
+    <switch data-type="allowComment" checked="{{ (allowComment == 1) ? true : false }}" color="#f39700" bindchange="comment" />
   </view>
 </view>
 <view class="thickLine"></view>
@@ -57,14 +57,14 @@
 <view class="baseInfo">
   <view class="label">填写真实姓名</view>
   <view class="content">
-    <switch data-type="needRealName" color="#f39700" bindchange="realName" />
+    <switch data-type="needRealName" checked="{{ (needRealName == 1) ? true : false }}" color="#f39700" bindchange="realName" />
   </view>
 </view>
 <view class="thickLine"></view>
 <view class="baseInfo">
   <view class="label">填写身份证号</view>
   <view class="content">
-    <switch data-type="needIDNo" color="#f39700" bindchange="userId" />
+    <switch data-type="needIDNo" checked="{{ (needIDNo == 1) ? true : false }}" color="#f39700" bindchange="userId" />
   </view>
 </view>
 <button class="submit" bindtap="submit">发起活动</button>

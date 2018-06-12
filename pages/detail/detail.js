@@ -95,8 +95,9 @@ Page({
    * 我要报名
    */
   signUp: function () {
+    var that = this;
     wx.navigateTo({
-      url: '../join/join?activityId=' + this.data.id,
+      url: '../join/join?activityId=' + that.data.id + '&needIDNo=' + that.data.result.needIDNo + '&needRealName=' + that.data.result.needRealName,
     })
   },
 

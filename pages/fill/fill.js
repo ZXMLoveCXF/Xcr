@@ -8,7 +8,8 @@ Page({
   data: {
     type: '',
     typeName: '',
-    value:''
+    value:'',
+    max: 30
   },
 
   /**
@@ -18,12 +19,14 @@ Page({
     var that = this;
     var type = options.type;
     var typeName = '';
+    var maxNum = 30;
     switch (type) {
       case 'activityName':
         typeName = '活动名称';
         break;
       case 'activityDesc':
         typeName = '活动简介';
+        maxNum = 1000;
         break;
       case 'participantNumberLimit':
         typeName = '限制人数';
@@ -32,7 +35,8 @@ Page({
     that.setData({
       typeName: typeName,
       type: type,
-      value:app.getCache(type)
+      value:app.getCache(type),
+      max: maxNum
     })
   },
   /**

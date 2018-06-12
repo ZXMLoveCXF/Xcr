@@ -8,7 +8,11 @@ Page({
   data: {
     activityId:'',
     checked:false,
-    phoneNumber:''
+    phoneNumber:'',
+    needIDNo: 0,
+    needRealName: 0,
+    isCode: true ,//是否可以点击获取验证码
+    codeTxt: '获取验证码'
   },
   /**
    * getPhone
@@ -24,6 +28,9 @@ Page({
    */
   code(){
     var that = this;
+    if (!that.data.isCode){
+      return
+    }
     var mobileNo = that.data.phoneNumber;
     if (!mobileNo || mobileNo.length != 11) {
       app.showMsgModel('温馨提示', '手机号输入有误');
@@ -44,7 +51,25 @@ Page({
           app.resErrMsg2('获取数据失败', res);
           return false;
         }
-
+        that.setData({
+          isCode: false,
+          codeTxt: '120s'
+        })
+        var times = 120
+        var interval = setInterval(function () {
+          times--
+          that.setData({
+            isCode: false,
+            codeTxt: times+'s'
+          })
+          if (times < 0){
+            clearInterval(interval);
+            that.setData({
+              isCode: true,
+              codeTxt: '获取验证码'
+            })
+          }
+        }.bind(this), 1000)
       }, null, 'GET', app.getCache("token")
     )
   },
@@ -53,7 +78,9 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      activityId: options.activityId
+      activityId: options.activityId,
+      needRealName: options.needRealName,
+      needIDNo: options.needIDNo
     })
   },
   /**

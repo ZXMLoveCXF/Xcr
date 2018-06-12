@@ -1,7 +1,7 @@
 <!--pages/detail/message/message.wxml-->
 <view class='actName'>{{activityName}}</view>
 <form bindsubmit='setMsg'>
-  <textarea name='msg' class='msg'></textarea>
+  <textarea name='msg' class='msg' maxlength='500'></textarea>
   <button class='btn' form-type="submit">留言</button>
 </form>
 

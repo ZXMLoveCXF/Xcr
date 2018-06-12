@@ -16,11 +16,11 @@
       <image src="../../resources/images/arrow.png"></image>
     </view>
   </view>
-  <view class="album">
+  <scroll-view scroll-x="true" class="album">
     <block wx:for="{{ result.activityImages }}">
       <image wx:if="{{ index < 8  }}" src="{{ item.imageUrl }}"></image>
     </block>
-  </view>
+  </scroll-view>
 </view>
 <view wx:if="{{ result.activityUsers.length }}" class="act-title" bindtap='toUser'>
   <view class="a-title">
@@ -42,7 +42,7 @@
     </block>
   </view>
 </view>
-<view class="brtn" wx:if="{{ user.isManager == 0 }}">
+<view class="brtn" wx:if="{{ user.isManager == 0 && result.activityTimeStatus == 1 }}">
   <button class="btn" bindtap='signUp'>我要报名</button>
 </view>
 

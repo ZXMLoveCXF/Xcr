@@ -3,7 +3,7 @@
 <view class="baseInfo">
   <view class="label">活动名称</view>
   <view class="content" bindtap="fillIn" data-type="activityName">
-    <text>{{ activityName?activityName:'请输入活动名称' }}</text>
+    <text class='{{ activityName ? "black":"" }}'>{{ activityName?activityName:'请输入活动名称' }}</text>
     <image src="../../resources/images/arrow.png"></image>
   </view>
 </view>
@@ -34,7 +34,7 @@
 <view class="baseInfo">
   <view class="label">活动简介</view>
   <view class="content" bindtap="fillIn" data-type="activityDesc">
-    <text>{{ activityDesc?activityDesc:'请简单介绍一下活动内容' }}</text>
+    <text class='content'>{{ activityDesc?activityDesc:'请简单介绍一下活动内容' }}</text>
     <image src="../../resources/images/arrow.png"></image>
   </view>
 </view>
@@ -67,4 +67,4 @@
     <switch data-type="needIDNo" checked="{{ (needIDNo == 1) ? true : false }}" color="#f39700" bindchange="userId" />
   </view>
 </view>
-<button class="submit" bindtap="submit">发起活动</button>
+<button class="submit" bindtap="submit">{{ bEdit ? "修改" : "发起活动" }}</button>

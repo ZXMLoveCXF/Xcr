@@ -41,11 +41,12 @@ page {
   display: flex;
   /* justify-content: space-between; */
   width: 690rpx;
+  white-space: nowrap;
 }
 
 .album image {
-  width: 10%;
-  height: 40rpx;
+  width: 120rpx;
+  height: 90rpx;
   margin-right: 2.8%;
 }
 

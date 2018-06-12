@@ -36,6 +36,16 @@ page {
   color: #ccc;
   margin-right: 10rpx
 }
+.baseInfo .content text.black{
+  color: black;
+}
+.baseInfo .content text.content{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  max-width: 10em;
+  display: block;
+}
 .baseInfo .content image{
   width: 35rpx;
   height: 35rpx;
@@ -60,5 +70,6 @@ page {
   width: 690rpx;
   margin: 0 auto;
   margin-top: 30rpx;
-  margin-bottom: 30rpx
+  margin-bottom: 30rpx;
+  line-height: 100rpx;
 }

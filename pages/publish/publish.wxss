@@ -30,21 +30,24 @@ page {
   margin-left: 30rpx;
 }
 .baseInfo .content{
-  margin-right: 65rpx
+  margin-right: 65rpx;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 .baseInfo .content text{
+  flex: 1;
   color: #ccc;
-  margin-right: 10rpx
-}
-.baseInfo .content text.black{
-  color: black;
-}
-.baseInfo .content text.content{
+  margin: 0 10rpx 0 30rpx;
+  text-align: right;
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
-  max-width: 10em;
+  max-width: 400rpx;
   display: block;
+}
+.baseInfo .content text.black{
+  color: black;
 }
 .baseInfo .content image{
   width: 35rpx;
@@ -66,7 +69,6 @@ page {
 .submit{
   background-color: #f39700;
   color: #fff;
-  font-size: 30rpx;
   width: 690rpx;
   margin: 0 auto;
   margin-top: 30rpx;

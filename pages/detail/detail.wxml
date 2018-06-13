@@ -42,7 +42,7 @@
     </block>
   </view>
 </view>
-<view class="brtn" wx:if="{{ user.isManager == 0 && result.activityTimeStatus == 1 }}">
+<view class="brtn" wx:if="{{ user.isManager == 0 && result.activityTimeStatus == 1 && result.user.haveSignedup == 0 }}">
   <button class="btn" bindtap='signUp'>我要报名</button>
 </view>
 

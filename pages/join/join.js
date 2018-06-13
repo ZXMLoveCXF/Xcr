@@ -91,11 +91,11 @@ Page({
     var that = this;
     var _value = e.detail.value, mobileNo = _value.phone, verificationCode = _value.code, userRealName = _value.name, userIDNo = _value.IDcard, activityId = this.data.activityId;
     console.log(mobileNo, verificationCode, userRealName, userIDNo);
-    if (!userRealName) {
+    if (!userRealName && that.data.needRealName == 1) {
       app.showMsgModel('温馨提示', '请输入姓名');
       return false;
     }
-    if (!userIDNo) {
+    if (!userIDNo && that.data.needIDNo == 1) {
       app.showMsgModel('温馨提示', '请输入正确的身份证号');
       return false;
     }

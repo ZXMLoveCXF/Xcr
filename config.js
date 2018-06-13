@@ -28,7 +28,7 @@ var config = {
   cachePrefix: 'xtep_',
 
   //app名称
-  appName: '321GO活动助手',
+  appName: '',
 
   //image合法域名
   imageUrl: 'https://xtepactive.image.alimmdn.com'

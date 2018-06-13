@@ -1,6 +1,6 @@
 <form report-submit="true" bindsubmit="submit">
   <view class="content">
-    <block wx:if='{{ needRealName == 0 }}'>
+    <block wx:if='{{ needRealName == 1 }}'>
       <view class="tool">
         <view class="label">姓名</view>
         <view class="input">
@@ -9,7 +9,7 @@
       </view>
       <view class="line"></view>
     </block>
-    <block wx:if='{{ needIDNo == 0 }}'>
+    <block wx:if='{{ needIDNo == 1 }}'>
       <view class="tool">
         <view class="label">身份证号</view>
         <view class="input">

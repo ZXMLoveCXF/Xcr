@@ -269,7 +269,7 @@ function upload(page, pathes) {
               return false;
             }
             wx.hideToast();
-
+            page.getDetailData(page.data.id);
           }, null, 'POST', page.data.token
         )
       }

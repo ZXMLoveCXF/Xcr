@@ -43,7 +43,7 @@ page {
   overflow: hidden;
   text-overflow:ellipsis;
   white-space: nowrap;
-  max-width: 400rpx;
+  max-width: 300rpx;
   display: block;
 }
 .baseInfo .content text.black{

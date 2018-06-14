@@ -28,7 +28,7 @@ var config = {
   cachePrefix: 'xtep_',
 
   //app名称
-  appName: '',
+  appName: '特步跑步俱乐部',
 
   //image合法域名
   imageUrl: 'https://xtepactive.image.alimmdn.com'

@@ -14,6 +14,7 @@ Page({
     curpage: 1, // 当前页码
     isNeedScrollLoad: true, // 是否需要滚动加载，默认true
     isLoadding: true, // 是否加载中
+    totalPageCount: 0
   },
   /**
   * 获取用户信息发布活动
@@ -39,7 +40,7 @@ Page({
   /**
    * naToDetail
    */
-  naTo(e){
+  naTo(e) {
     console.log(e);
     wx.navigateTo({
       url: '../detail/detail?id=' + e.currentTarget.dataset.id,
@@ -102,7 +103,10 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    var that = this
+    if (!that.data.hasMore) {
+      return
+    }
     //是否需要滚动加载数据
     if (!this.data.isNeedScrollLoad) {
       return
@@ -114,26 +118,24 @@ Page({
     }
 
     //设置显示滚动加载状态
-    this.setData({
-      hasMore: true
-    })
+    
 
     //加载数据
-    var curpage = 1
+    var curpage = that.data.curpage
 
-    var that = this
+
     app.showLoading()
 
-    that.getActList(curpage)
+    that.getActList(curpage, true)
   },
 
   /**
    * 活动预告
    */
-  getActList: function (page) {
+  getActList: function (page, isAppend) {
 
     var that = this
-
+    
     app.showLoading()
 
     page = parseInt(page)
@@ -193,15 +195,28 @@ Page({
         }
 
         //设置页面数据
-        var curpage = that.data.curpage
-        curpage = page
+        var curpage = that.data.curpage;
+        var totalPageCount = result.totalPageCount;
+        if (curpage != totalPageCount) {
+          curpage++;
+        } else {
+          that.setData({
+            hasMore: false
+          })
+        }
+        let actListArr = viewListData;
+        if (isAppend) {
+          actListArr = that.data.actListData.concat(actListArr);
+        }
+
         that.setData({
           curpage: curpage,
-          actListData: viewListData,
+          actListData: actListArr,
           isNeedScrollLoad: total > page,
           isLoadding: false,
-          hasMore: total > page
+          totalPageCount: result.totalPageCount
         })
+
 
       }, function () { }, "POST"
     )

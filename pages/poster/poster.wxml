@@ -1,7 +1,7 @@
 <image class="preImg" src="{{ sSelectedSrc }}"></image>
 <view class="allPoster">
     <view class="poster" bindtap="chooseImage">
-        <image class="{{ (sIndex == -1)?'active':'' }}" data-index="-1" src="{{ uploadedImg?uploadedImg:'../../resources/images/addImg.png' }}"></image>
+        <image class="{{ (sIndex == -1)?'active':'' }}" data-index="-1" src="{{ uploadedImg?uploadedImg:'../../resources/images/addImg.png' }}" ></image>
     </view>
     <block wx:for="{{ aPosterList }}">
         <view class="poster">

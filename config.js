@@ -13,13 +13,13 @@ var config = {
   host,
 
   //base login
-  baseUrl: `http://${host}/`,
+  baseUrl: `https://${host}/`,
 
   // 登录地址，用于建立会话
-  loginUrl: `http://${host}/api/User/Login`,
+  loginUrl: `https://${host}/api/User/Login`,
 
   //发送用户信息到服务端
-  initUserUrl: `http://${host}/api/User/GetUserInfo`,
+  initUserUrl: `https://${host}/api/User/GetUserInfo`,
 
   //APPid
   wxAppId: 'wxaa1cde4ecb06a7e3',

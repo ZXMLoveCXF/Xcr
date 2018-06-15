@@ -1,10 +1,10 @@
 <view class="content">
   <view class="title">{{ name }}</view>
-  <block wx:for="{{ result }}">
+  <block wx:for="{{ result }}" wx:for-index="i">
     <view class="stitle">{{ item.imageUploadDate }}</view>
     <view class="images">
       <block wx:for="{{ item.images }}">
-        <image class="action" src="{{ item.imageUrl }}"></image>
+        <image class="action" src="{{ item.imageUrl }}" data-index="{{ i }}" bindtap='preImg' data-src="{{ item.imageUrl }}"></image>
       </block>
     </view>
   </block>

@@ -1,7 +1,7 @@
 <!-- pages/detail/detail.wxml -->
 <image class="banner" src="{{ result.mainImagePath }}"></image>
 <view class="act-title">
-  <view class="title">{{ result.activityName }}</view>
+  <view class="title" style='font-weight:bold'>{{ result.activityName }}</view>
   <view>活动地点: {{ result.locationName }}</view>
   <view>活动时间: {{ result.activityTime }}</view>
 </view>

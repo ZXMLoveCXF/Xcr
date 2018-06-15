@@ -155,6 +155,24 @@ Page({
     ],
     result:[]
   },
+  /**
+ * preImg
+ */
+  preImg(e) {
+    console.log(e);
+    var that = this;
+    var index = e.currentTarget.dataset.index;
+    var src = e.currentTarget.dataset.src;
+    var temp = [];
+    var result = that.data.result[index];
+    for (var i in result.images){
+      temp.push(result.images[i].imageUrl);
+    }
+    wx.previewImage({
+      current: src, // 当前显示图片的http链接
+      urls: temp // 需要预览的图片http链接列表
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载

@@ -285,7 +285,7 @@ App({
         var token = that.getCache('token')
         var time = that.getCache('time')
         var nowTime = new Date().getTime()
-        var loginFlg = false
+        var loginFlg = false;
         if (time == '' || nowTime - time >= 24 * 60 * 60 * 1000) { //如果当前时间比缓存的时间大于等于1天，强制性调用一次登录
           loginFlg = true
         }
@@ -295,6 +295,7 @@ App({
           //看初始化信息是否存在
           callback();
         } else { //需要重新登录
+          
           that.userLogin(callback)
         }
 

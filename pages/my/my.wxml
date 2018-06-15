@@ -1,0 +1,52 @@
+<!--pages/my/my.wxml-->
+<block wx:if="{{ result.userInfo != null }}">
+  <view class='header'>
+    <view class='img'>
+      <image src='{{ result.userInfo.avatarurl }}'></image>
+    </view>
+    <view class='name'>{{ result.userInfo.nickname }}</view>
+    <view class='num'>会员号：{{ result.user_no }}</view>
+  </view>
+  <view class='content'>
+    <view>
+      <text class='val'>{{ result.baseInfo.runKilometers }}</text>
+      <text class='name'>总跑量（KM）</text>
+    </view>
+    <view>
+      <text class='val'>{{ result.baseInfo.points }}</text>
+      <text class='name'>我的特豆</text>
+    </view>
+  </view>
+  <view class='nav'>
+    <view class='item'>
+      <image src='../../resources/images/my_team.png'></image>
+      <view>我的跑团</view>
+      <image src='../../resources/images/arrow.png'></image>
+    </view>
+    <view class='item'>
+      <image src='../../resources/images/my_act.png'></image>
+      <view>我的活动</view>
+      <image src='../../resources/images/arrow.png'></image>
+    </view>
+    <view class='item'>
+      <image src='../../resources/images/my_appointment.png'></image>
+      <view>我的预约</view>
+      <image src='../../resources/images/arrow.png'></image>
+    </view>
+  </view>
+</block>
+<block wx:else>
+  <view class='wrap' style='height: {{scrollHeight}}px;'>
+    <view class='title'>
+      <view>跑步俱乐部</view>
+      <view>欢迎您</view>
+    </view>
+    <view class='mark'>
+      <view>请微信授权登录后放心使用跑步俱乐部</view>
+      <view>您的信息和数据将收到保护</view>
+    </view>
+    <button hover-stop-propagation='true' open-type="getUserInfo" bindgetuserinfo="getWxUser">
+      <image src='../../resources/images/wx.png'></image>微信授权登录
+    </button>
+  </view>
+</block>

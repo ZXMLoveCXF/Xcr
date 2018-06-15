@@ -1,0 +1,109 @@
+/* pages/my/my.wxss */
+.header{
+  padding: 30rpx 0 20rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20rpx;
+}
+.header view{
+  display: flex;
+  justify-content: center;
+}
+.header .img{
+  width: 140rpx;
+  height: 140rpx;
+  border: 1rpx solid #d5d5d5;
+  border-radius: 50%;
+  padding: 10rpx;
+  margin: 0 auto;
+}
+.header image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.header .name{
+  padding-top: 20rpx;
+}
+.header .num{
+  font-size: 28rpx;
+  color: #999;
+}
+
+.content{
+  background-color: white;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.content>view{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 30rpx 0;
+  flex-direction: column;
+  align-items: center;
+}
+.content .name{
+  color: #999;
+}
+.content .val{
+  font-size: 40rpx;
+}
+
+.nav{
+  background-color: white;
+}
+.nav .item{
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #d5d5d5;
+  margin-left: 40rpx;
+  padding: 20rpx;
+}
+.nav .item view{
+  flex: 1;
+  padding: 0 20rpx;
+}
+.nav .item image:nth-child(1){
+  width: 60rpx;
+  height: 60rpx; 
+}
+.nav .item image:nth-child(3){
+  width: 40rpx;
+  height: 40rpx; 
+}
+
+.wrap{
+  background-color: white;
+  padding-top: 200rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .title{
+    font-size: 36rpx;
+    text-align: center;
+    line-height: 60rpx;
+    padding-bottom: 60rpx;
+}
+.wrap .mark{
+    font-size: 28rpx;
+    color: #999;
+    text-align: center;
+    padding-bottom: 60rpx;
+}
+.wrap button{
+  width: 500rpx;
+  background-color: #f79400;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+.wrap button image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}

@@ -9,8 +9,9 @@
     "pages/join/join",
     "pages/detail/detail",
     "pages/album/album",
-    "pages/detail/message/message"
-    ,"pages/user/user"
+    "pages/detail/message/message",
+    "pages/user/user",
+    "pages/my/my"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -44,7 +45,7 @@
         "selectedIconPath": "/resources/images/act_active.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/my/my",
         "text": "我",
         "iconPath": "/resources/images/mine.png",
         "selectedIconPath": "/resources/images/mine.png"

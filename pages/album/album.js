@@ -7,152 +7,6 @@ Page({
    */
   data: {
     imageHeight: '60',
-    productArr: [//图片地址
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      },
-      {
-        url: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg'
-      },
-      {
-        url: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg'
-      }
-    ],
     result:[]
   },
   /**
@@ -213,28 +67,6 @@ Page({
       }, null, 'GET', that.data.token
     )
 
-    // wx.getSystemInfo({
-    //   success: function (res) {
-    //     console.log(res);
-    //     // 可使用窗口宽度、高度
-    //     console.log('height=' + res.windowHeight);
-    //     console.log('width=' + res.windowWidth);
-    //     // var num = parseInt(res.windowHeight / that.data.imageHeight);
-    //     // for (var i = 0; i < num; i++){
-    //     //   that.data.arry[i] = true;
-    //     //   that.setData({
-    //     //     arry: that.data.arry
-    //     //   })
-    //     // }
-    //     // 计算主体部分高度,单位为px
-    //     that.setData({
-    //       // second部分高度 = 利用窗口可使用高度 - first部分高度（这里的高度单位为px，所有利用比例将300rpx转换为px）
-    //       _height: res.windowHeight,
-    //       _width: res.windowWidth
-    //     })
-    //   }
-    // })
-
     var arrHight = [];
     var arr = [];
     for (var i = 0; i < 48; i++) {
@@ -249,37 +81,6 @@ Page({
     })
   },
   /**
-   * onPageScroll
-   */
-  // onPageScroll(res) {
-  //   console.log(res.scrollTop);
-  //   var that = this;
-  //   var _height = that.data._height;
-  //   var arrHight = that.data.arrHight;
-  //   var event = e;
-  //   var scrollTop = res.scrollTop;
-  //   var arr = that.data.arr;
-  //   // var height = that.data._height + res.scrollTop;
-  //   // var str = parseInt(height / that.data.imageHeight);
-  //   // that.data.arry[str] = true;
-  //   // that.setData({
-  //   //   arry: that.data.arry
-  //   // })
-  //   for (var i = 0; i < this.data.productArr.length; i++) {
-  //     if (arrHight[i] < scrollTop) {
-  //       if (arr[i] == false) {
-  //         arr[i] = true;
-  //         // arr[i*2]   arr[i*2+1] 
-  //       }
-  //       //n = i + 1;
-  //     }
-  //     //arr[i] = true;
-  //   }
-  //   this.setData({
-  //     arr: arr
-  //   })
-  // },
-  /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
@@ -292,27 +93,6 @@ Page({
   onShow: function () {
 
   },
-  // scroll: function (e) {
-  //   var _height = this.data._height; //可见区域高度
-  //   var arrHight = this.data.arrHight;
-  //   var event = e;
-  //   var scrollTop = event.detail.scrollTop + _height;
-  //   var arr = this.data.arr;
-  //   console.log(scrollTop)
-  //   for (var i = 0; i < this.data.productArr.length; i++) {
-  //     if (arrHight[i] < scrollTop) {
-  //       if (arr[i] == false) {
-  //         arr[i] = true;
-  //         // arr[i*2]   arr[i*2+1] 
-  //       }
-  //       //n = i + 1;
-  //     }
-  //     //arr[i] = true;
-  //   }
-  //   this.setData({
-  //     arr: arr
-  //   })
-  // },
 
   /**
    * 生命周期函数--监听页面隐藏

@@ -12,7 +12,6 @@ Page({
     total: 0, // 总数
     pagesize: 10, // 每页显示多少条
     curpage: 1, // 当前页码
-    isNeedScrollLoad: true, // 是否需要滚动加载，默认true
     isLoadding: true, // 是否加载中
     totalPageCount: 0
   },
@@ -58,7 +57,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    app.checkLogin(function () {
+      that.getActList(1);
+    })
   },
 
   /**
@@ -72,11 +74,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
-    var that = this
-    app.checkLogin(function () {
-      that.getActList(1);
-    })
+   
   },
 
   /**
@@ -106,10 +104,6 @@ Page({
   onReachBottom: function () {
     var that = this
     if (!that.data.hasMore) {
-      return
-    }
-    //是否需要滚动加载数据
-    if (!this.data.isNeedScrollLoad) {
       return
     }
 
@@ -213,7 +207,6 @@ Page({
         that.setData({
           curpage: curpage,
           actListData: actListArr,
-          isNeedScrollLoad: total > page,
           isLoadding: false,
           totalPageCount: result.totalPageCount
         })

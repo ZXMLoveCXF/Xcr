@@ -82,6 +82,12 @@
 					"name": "我的",
 					"pathName": "pages/my/my",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的活动",
+					"pathName": "pages/myact/myact",
+					"query": ""
 				}
 			]
 		}

@@ -12,7 +12,7 @@ page {
 .act-title {
   margin-top: 20rpx;
   font-size: 28rpx;
-  color: #ccc;
+  color: #888;
   background-color: #fff;
   padding-left: 30rpx;
   padding-bottom: 10rpx;

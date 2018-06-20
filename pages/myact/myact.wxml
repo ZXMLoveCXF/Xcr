@@ -1,0 +1,45 @@
+<!--pages/myact/myact.wxml-->
+<view class="navbar">
+  <view class="inner">
+    <block wx:for="{{navData}}">
+      <view data-index="{{ index }}" bindtap="switchNavData" class="nav {{ index == indexs ? 'active' : ''}}">
+        <text>{{ item.title }}</text>
+      </view>
+    </block>
+  </view>
+</view>
+<view class='box'>
+  <block wx:if='{{ indexs == 0 }}'>
+    <view class='item' wx:for='{{ notStartedActivities }}' bindtap='toDetail' data-id='{{ item.activityId }}'>
+      <image src='{{ item.mainImagePath }}'></image>
+      <view>
+        <text>{{ item.activityName }}</text>
+        <text>{{ item.activityTime }}</text>
+        <text>{{ item.locationName }}</text>
+      </view>
+      <image src='../../resources/images/arrow.png'></image>
+    </view>
+  </block>
+  <block wx:elif='{{ indexs == 1 }}'>
+    <view class='item' wx:for='{{ underWayActivities }}' bindtap='toDetail' data-id='{{ item.activityId }}'>
+      <image src='{{ item.mainImagePath }}'></image>
+      <view>
+        <text>{{ item.activityName }}</text>
+        <text>{{ item.activityTime }}</text>
+        <text>{{ item.locationName }}</text>
+      </view>
+      <image src='../../resources/images/arrow.png'></image>
+    </view>
+  </block>
+  <block wx:elif='{{ indexs == 2 }}'>
+    <view class='item' wx:for='{{ expiredActivities }}' bindtap='toDetail' data-id='{{ item.activityId }}'>
+      <image src='{{ item.mainImagePath }}'></image>
+      <view>
+        <text>{{ item.activityName }}</text>
+        <text>{{ item.activityTime }}</text>
+        <text>{{ item.locationName }}</text>
+      </view>
+      <image src='../../resources/images/arrow.png'></image>
+    </view>
+  </block>
+</view>

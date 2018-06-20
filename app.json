@@ -11,7 +11,8 @@
     "pages/album/album",
     "pages/detail/message/message",
     "pages/user/user",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/myact/myact"
   ],
   "window": {
     "backgroundTextStyle": "light",

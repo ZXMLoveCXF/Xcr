@@ -1,4 +1,4 @@
-// pages/my/my.js
+// pages/myact/myact.js
 var app = getApp();
 Page({
 
@@ -6,12 +6,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-    scrollHeight: 0,
-    isAuthorize: true,  //是否授权
+    navData: [
+      { title: '未开始' },
+      { title: '进行中' },
+      { title: '已结束' }
+    ],
+    indexs: 0,
     token: 0,
-    baseInfo: null,
-    userInfo: {},
-    user_no: ''
+    expiredActivities: [],
+    notStartedActivities: [],
+    underWayActivities: []
   },
 
   /**
@@ -31,18 +35,18 @@ Page({
       token: token
     })
     app.checkLogin(function () {
-      that.getUserInfo();
+      that.getList();
     })
   },
 
   /**
-   * 获取用户信息
+   * 获取活动列表
    */
-  getUserInfo() {
+  getList: function () {
     var that = this;
     //
     app.reqServerData(
-      app.config.baseUrl + 'api/user/baseinfo',
+      app.config.baseUrl + 'api/user/myactivities',
       null,
       function (res) {
         console.log(res);
@@ -57,31 +61,31 @@ Page({
         var result = res.data.result;
 
         that.setData({
-          baseInfo: result.baseInfo,
-          userInfo: result.userInfo,
-          user_no: result.user_no
+          expiredActivities: result.expiredActivities,
+          notStartedActivities: result.notStartedActivities,
+          underWayActivities: result.underWayActivities
         })
       }, null, null, that.data.token
     )
   },
 
   /**
-   * 获取微信用户信息
+   * nav切换
    */
-  getWxUser: function(e){
-    app.getWxUser(e.detail, function () {
-      wx.navigateTo({
-        url: '../publish/publish'
-      });
-    });
+  switchNavData: function (e) {
+    console.log(e.currentTarget.dataset.index);
+    var that = this;
+    that.setData({
+      indexs: e.currentTarget.dataset.index,
+    })
   },
 
   /**
-   * 我的活动
+   * 活动详情
    */
-  toMyAct: function(){
+  toDetail: function (e) {
     wx.navigateTo({
-      url: '../myact/myact'
+      url: '../detail/detail?id=' + e.currentTarget.dataset.id
     });
   },
 
@@ -117,7 +121,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+    this.getList();
+    wx.stopPullDownRefresh();
   },
 
   /**

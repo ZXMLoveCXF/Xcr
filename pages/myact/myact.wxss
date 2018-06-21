@@ -10,7 +10,7 @@
 .box{padding-top: 90rpx;}
 .item{margin-top: 30rpx;background-color: white;display: flex;padding: 20rpx 30rpx;align-items: center;}
 .item view{flex: 1;padding-left: 20rpx;display: flex;flex-direction: column;}
-.item view text{font-size: 28rpx;color: #aaaaaa;}
+.item view text{font-size: 28rpx;color: #aaaaaa;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;width: 400rpx;}
 .item view text:nth-child(1){font-size: 36rpx;font-weight: bold;color: black;}
-.item image:nth-child(1){width: 140rpx;height: 140rpx;border-radius: 20rpx;}
+.item image:nth-child(1){width: 220rpx;height: 140rpx;border-radius: 20rpx;}
 .item image:nth-child(3){width: 50rpx;height: 50rpx;}

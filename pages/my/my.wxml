@@ -2,7 +2,7 @@
 <block wx:if="{{ userInfo != null }}">
   <view class='header'>
     <view class='img'>
-      <image src='{{ result.userInfo.avatarurl }}'></image>
+      <image src='{{ userInfo.avatarurl }}'></image>
     </view>
     <view class='name'>{{ userInfo.nickname }}</view>
     <view class='num'>会员号：{{ user_no }}</view>

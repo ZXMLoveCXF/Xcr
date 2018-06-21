@@ -19,3 +19,5 @@
   </view>
 </block>
 <button class='addAct' open-type="getUserInfo" bindgetuserinfo="getWxUser">+</button>
+<!-- <button wx:if="{{ !userInfo }}" class='addAct' open-type="getUserInfo" bindgetuserinfo="getWxUser">+</button>
+<button wx:if="{{ userInfo }}" class='addAct' bindtap='jump'>+</button> -->

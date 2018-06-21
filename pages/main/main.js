@@ -13,7 +13,8 @@ Page({
     pagesize: 10, // 每页显示多少条
     curpage: 1, // 当前页码
     isLoadding: true, // 是否加载中
-    totalPageCount: 0
+    totalPageCount: 0,
+    userInfo: true
   },
   /**
   * 获取用户信息发布活动
@@ -34,6 +35,7 @@ Page({
       console.log('重新初始化')
       app.getWxUser(e.detail, that.jump);
     }
+
 
   },
   /**
@@ -74,7 +76,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-   
+
   },
 
   /**
@@ -113,7 +115,7 @@ Page({
     }
 
     //设置显示滚动加载状态
-    
+
 
     //加载数据
     var curpage = that.data.curpage
@@ -130,7 +132,7 @@ Page({
   getActList: function (page, isAppend) {
 
     var that = this
-    
+
     app.showLoading()
 
     page = parseInt(page)
@@ -153,6 +155,7 @@ Page({
         var data = res.data;
         console.log(data);
         var result = data.result;
+        var userInfo = result.userInfo;
         console.log(result);
         var total = result.totalPageCount // 总页数
         var listData = result.resultList
@@ -208,11 +211,12 @@ Page({
           curpage: curpage,
           actListData: actListArr,
           isLoadding: false,
-          totalPageCount: result.totalPageCount
+          totalPageCount: result.totalPageCount,
+          userInfo: userInfo ? true : false
         })
 
 
-      }, function () { }, "POST"
+      }, function () { }, "POST", app.getCache('token')
     )
   },
 

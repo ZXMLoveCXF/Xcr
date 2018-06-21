@@ -1,4 +1,4 @@
-<image class="banner" bindtap="toPost" data-id="{{ uploadedId }}" data-src="{{ uploadedImg }}" src="{{ uploadedImg?uploadedImg:'../../resources/images/addImg.png' }}"></image>
+<image class="banner" mode='widthFix' bindtap="toPost" data-id="{{ uploadedId }}" data-src="{{ uploadedImg }}" src="{{ uploadedImg?uploadedImg:'../../resources/images/addPoster.png' }}"></image>
 <view class="title">基础信息</view>
 <view class="baseInfo">
   <view class="label">活动名称</view>

@@ -5,7 +5,6 @@ page {
 .banner{
   width: 690rpx;
   margin-left: 30rpx;
-  height: 260rpx;
   margin-top: 20rpx
 }
 .title{

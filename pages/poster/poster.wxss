@@ -18,7 +18,6 @@
     width: 100%;
     border-radius: 10rpx;
     border: 4rpx solid #fff;
-    height: 120rpx;
 }
 .allPoster .poster image.active{
     width: 100%;

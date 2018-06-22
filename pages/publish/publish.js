@@ -253,6 +253,10 @@ Page({
               longitude: activityDetails.locationLongitude
             }
             , activityTime: activityDetails.activityTime.split('星')[0]
+            , uploadedImg: activityDetails.mainImagePath
+            , activityName: activityDetails.activityName
+            , activityDesc: activityDetails.activityDesc
+            , participantNumberLimit: activityDetails.participantNumberLimit
           })
           app.setCache('activityName', activityDetails.activityName);
           app.setCache('activityDesc', activityDetails.activityDesc);

@@ -1,11 +1,11 @@
 <image class="preImg" src="{{ sSelectedSrc }}"></image>
 <view class="allPoster">
     <view class="poster" bindtap="chooseImage">
-        <image mode='widthFix' class="{{ (sIndex == -1)?'active':'' }}" data-index="-1" src="{{ uploadedImg?uploadedImg:'../../resources/images/addImg.png' }}" ></image>
+        <image class="{{ (sIndex == -1)?'active':'' }}" data-index="-1" src="{{ uploadedImg?uploadedImg:'../../resources/images/addImg.png' }}" ></image>
     </view>
     <block wx:for="{{ aPosterList }}">
         <view class="poster">
-            <image mode='widthFix' class="{{ (sIndex == index)?'active':'' }}" data-index="{{ index }}" bindtap="select" data-id="{{ item.imageGuid }}" data-src="{{ item.imageUrl }}" src="{{ item.imageUrl }}"></image>
+            <image class="{{ (sIndex == index)?'active':'' }}" data-index="{{ index }}" bindtap="select" data-id="{{ item.imageGuid }}" data-src="{{ item.imageUrl }}" src="{{ item.imageUrl }}"></image>
         </view>
     </block>
 </view>

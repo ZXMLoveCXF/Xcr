@@ -39,6 +39,11 @@ Page({
  */
   chooseImage: function () {
     var that = this
+    uploadedImgs = [], uploadedIds = [], aTempIds = [];
+    that.setData({
+      uploadedImgs: [],
+      uploadedIds: []
+    })
     wx.chooseImage({
       count: 9,
       sizeType: ['original', 'compressed'],
@@ -239,7 +244,6 @@ function upload(page, pathes) {
         id: data.guid
       })
       console.log(uploadedImgs);
-      console.log(uploadedImgs)
       console.log(uploadedIds)
       page.setData({  //上传成功修改显示图片
         uploadedIds: uploadedIds,
@@ -270,6 +274,7 @@ function upload(page, pathes) {
             }
             wx.hideToast();
             page.getDetailData(page.data.id);
+
           }, null, 'POST', page.data.token
         )
       }

@@ -28,18 +28,6 @@
     "position": "bottom",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "跑团",
-        "iconPath": "/resources/images/run.png",
-        "selectedIconPath": "/resources/images/run.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "预约",
-        "iconPath": "/resources/images/time.png",
-        "selectedIconPath": "/resources/images/time.png"
-      },
-      {
         "pagePath": "pages/main/main",
         "text": "活动",
         "iconPath": "/resources/images/act.png",

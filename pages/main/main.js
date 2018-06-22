@@ -51,6 +51,11 @@ Page({
    * jump
    */
   jump() {
+    app.delCache('activityName');
+    app.delCache('activityDesc');
+    app.delCache('participantNumberLimit');
+    app.delCache('postSrc');
+    app.delCache('participantNumberLimit');
     wx.navigateTo({
       url: '../publish/publish',
     })

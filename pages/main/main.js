@@ -161,6 +161,9 @@ Page({
         var userInfo = result.userInfo;
         console.log(result);
         var total = result.totalPageCount // 总页数
+        if (!result.resultList){
+          return false;
+        }
         var listData = result.resultList
         var viewListData = []
 
